@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.glairedaggers.retrotvfx": "file:C:/Users/amaru/Documents/RetroTVFX Unity/RetroTVFX",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.textmeshpro": "3.0.6",

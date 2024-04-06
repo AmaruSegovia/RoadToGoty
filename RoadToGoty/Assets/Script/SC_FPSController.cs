@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SC_FPSController : MonoBehaviour
 {
+    public GameObject flashlight_player;
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
@@ -51,10 +52,14 @@ public class SC_FPSController : MonoBehaviour
             moveDirection.y = movementDirectionY;
         }
 
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        if (!characterController.isGrounded)
+        if (Input.GetKeyDown(KeyCode.F) && flashlight_player == enabled)
+        {
+            flashlight_player.SetActive(!flashlight_player.activeSelf);
+        }
+            // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
+            // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
+            // as an acceleration (ms^-2)
+            if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
