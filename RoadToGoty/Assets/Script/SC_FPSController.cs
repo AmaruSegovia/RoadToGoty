@@ -56,6 +56,10 @@ public class SC_FPSController : MonoBehaviour
         {
             flashlight_player.SetActive(!flashlight_player.activeSelf);
         }
+        if (flashlight_player == enabled)
+        {
+            flashlight_player.transform.forward = playerCamera.transform.forward;
+        }
             // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
             // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
             // as an acceleration (ms^-2)
